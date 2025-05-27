@@ -1,0 +1,68 @@
+{
+  "expo": {
+    "name": "Lifeline Alert",
+    "slug": "lifeline-alert",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/lifelinelogo.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "backgroundColor": "#FFFFFF",
+      "image": "./assets/lifelinelogo.png",
+      "resizeMode": "contain"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.happigilbert.lifeline"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/lifelinelogo.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.happigilbert.lifeline",
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/lifelinelogo.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow Lifeline Alert App to use your location"
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/lifelinelogo.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#FFFFFF"
+        }
+      ],
+      "expo-asset"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "5c92b0d4-e4e1-478a-b935-495d060d63f6"
+      }
+    },
+    "owner": "happigilbert"
+  }
+}
