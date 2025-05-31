@@ -4,6 +4,8 @@ import MapView, { Marker } from 'react-native-maps';
 import axios from 'axios';
 import useLocation from '@/hooks/UseLocation';
 import Button from '@/components/ui/Button';
+import { router } from 'expo-router';
+
 
 export default function HomeScreen({ navigation }: any) {
   const { latitude, longitude, address, errorMsg } = useLocation();
@@ -70,7 +72,7 @@ export default function HomeScreen({ navigation }: any) {
       );
 
       if (response.status === 200 || response.status === 201) {
-        navigation.navigate('AlertSent');
+        router.push('/AlertSentScreen');
       } else {
         throw new Error(`Unexpected server response with status ${response.status}`);
       }
