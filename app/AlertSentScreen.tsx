@@ -1,10 +1,11 @@
+import { router } from 'expo-router';
 import React, { useEffect } from 'react';
 import { View, Text } from 'react-native';
 
 export default function AlertSentScreen({ navigation }: any) {
   useEffect(() => {
     setTimeout(() => {
-      navigation.navigate('AlertStatus');
+      router.push('/AlertStatusScreen');
     }, 3000);
   }, []);
 
